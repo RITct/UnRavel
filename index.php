@@ -2,7 +2,7 @@
 session_start();
 require_once("database.php");
 global $result;
-header("Locaiton:mkdb.php");
+header("Location:mkdb.php");
 echo "<!DOCTYPE html>
 <html>
 <head>
