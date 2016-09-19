@@ -14,7 +14,7 @@
 		<div id="header">
 			<div id="navigation">
 				<span id="mobile-navigation">&nbsp;</span>
-				<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
+				
 				<ul id="menu">
 					<li class="selected">
 						<a href="index.php">Home</a>
@@ -23,11 +23,11 @@
 						<a href="leader.php">Leader Board</a>
 					</li>
 					<li>
-						<a href="rules.php">RuLES</a>
+						<a href="rules.php">RULES</a>
 						
 					</li>
 					<li>
-						<a href="https://www.facebook.com/decipher.ritu" target="_blank">WATSON</a>	
+						<a href="https://www.facebook.com/decipher.ritu" target="_blank">ALFRED</a>	
 					</li>
 					<?php
 						session_start();
@@ -45,14 +45,14 @@
 			
 				 <div class="container tablestyle">
         
-          <h1 id="rank" align="center" > brains</h1>
+          <h1 id="rank" align="center" style="color:red"> brains</h1>
           
 		<h4>
             <table width="100%"   >
-            <tr align="justify"  height="40"><th width="10%">RANK</th><th width="25%">NAME</th><th width="16%">COLLEGE</th><th width="10%">LEVEL</th></tr>
+            <tr align="justify"  height="40" ><th width="10%" style="color:red">RANK</th><th width="25%" style="color:red">NAME</th><th width="16%" style="color:red">COLLEGE</th><th width="10%" style="color:red">LEVEL</th></tr>
             
             <!-- start here-->
-	<?php
+	<?php/*
 	session_start();
 	require_once("database.php");
 	global $result;
@@ -113,7 +113,7 @@
 	{
 			?><a class="link" href="leader.php?page=<?php echo $page+1?>"><?php echo "Next " ?></a> <?php
 	}
-?>
+?>*/
 
 </div>
            <!-- end here-->

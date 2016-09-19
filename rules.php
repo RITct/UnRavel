@@ -3,18 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rules | Decipher2016</title>
+	<title>Rules | Unravel</title>
 	<link rel="icon" href="../images/icon.png" type="image/png" sizes="16x16">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<script src="js/mobile.js" type="text/javascript"></script>
+	
 </head>
-<body>
+<body background="images/joker.png">
 	<div id="page">
 		<div id="header">
 			<div id="navigation">
 				<span id="mobile-navigation">&nbsp;</span>
-				<a href="index1.php" class="logo"><img src="images/logo.png" alt=""></a>
+				
 				<ul id="menu">
 					<li class="selected">
 						<a href="index.php">HOME</a>
@@ -27,7 +28,7 @@
 						
 					</li>
 					<li>
-						<a href="https://www.facebook.com/decipher.ritu" target="_blank">WATSON</a>	
+						<a href="https://www.facebook.com/decipher.ritu" target="_blank">ALFRED</a>	
 					</li>
 					<?php
 					session_start();
@@ -41,7 +42,7 @@
 		</div>
 		<div id="body" class="runningsinglepost">
 			<div>
-			<h2>HAVE THESE IN YOUR MIND PALACE</h2>
+			<h2>BEWARE BAT!</h2>
 			<p>THE GAME IS BETWEEN YOU AND ME ALONE</p>
 			<p>USE YOUR FACEBOOK ACCOUNT TO LOGIN</p>
 			<p>DONT POST ANSWERS OR ABUSIVE WORDS IN THE FORUM</p>

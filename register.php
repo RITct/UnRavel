@@ -1,17 +1,17 @@
 <?php
-session_start();
+/*session_start();
 if (!isset($_SESSION["fbuid"]))
 {$output = "<script>
         window.location='index.php';
         </script>";
-	  echo $output; }
+	  echo $output; }*/
 ?>
 
 <!DOCTYPE html>
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>DECIPHER | REGISTER</title>
+    <title>UNRAVEL | REGISTER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <link rel="stylesheet" href="css/reset.css">
@@ -59,7 +59,7 @@ padding-top:20px;
 		<div id="header">
 			<div id="navigation">
 				<span id="mobile-navigation">&nbsp;</span>
-				<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a
+				
   
 </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-require_once("database.php");
+$result = mysqli_connect("localhost","thampichayan","123decipher123","decipher16");
 
 $sql = "CREATE TABLE IF NOT EXISTS `wrong` (
 		  `no` int(2) NOT NULL AUTO_INCREMENT,
@@ -65,5 +65,5 @@ $sql = "CREATE TABLE IF NOT EXISTS `accesslogs` (
 		  UNIQUE KEY `id` (`id`)
 	);";
 $ref = $result->query($sql);
-echo "done importing db..."
+
 ?>

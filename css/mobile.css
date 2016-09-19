@@ -2,6 +2,11 @@
     font-family:sherlock; 
     src: url(../fonts/sherlock.ttf);
 }
+@font-face {
+    font-family:unrav; 
+    src: url(../fonts/joker.ttf);
+}
+
 @media only screen and (min-width : 300px) and (max-width : 750px) {
 html {
 	-webkit-text-size-adjust: none;
@@ -157,11 +162,12 @@ body{
 	width: 95%;
 }
 #body div.header div h1 {
-	font-family: sherlock;
+	font-family: unrav;
 	font-size: 46px;
 	font-weight: bolder;
 	//line-height: 46px;
 	width: 100%;
+	opacity: 0.85;
 }
 #footer div .connect {
 	float: none;
@@ -190,7 +196,7 @@ body{
 	width: 95%;
 }
 #body.home div.header div h1 {
-	font-family: sherlock;
+	font-family: unrav;
 	font-size: 48px;
 	font-weight: bold;
 	line-height: 58px;

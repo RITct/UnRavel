@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once("database.php");
-global $result;
+//require_once("database.php");
+//global $result;
 echo "<!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +18,7 @@ echo "<!DOCTYPE html>
 		<div id=\"header\">
 			<div id=\"navigation\">
 				<span id=\"mobile-navigation\">&nbsp;</span>
-				<a href=\"index.php\" class=\"logo\"><img src=\"images/logo.png\"></a>
+				
 				<ul id=\"menu\">
 					<li class=\"selected\">
 						<a href=\"index.php\">Home</a>
@@ -31,7 +31,7 @@ echo "<!DOCTYPE html>
 						
 					</li>
 					<li>
-						<a href=\"https://www.facebook.com/decipher.ritu\" target=\"_blank\">WATSON</a>				
+						<a href=\"https://www.facebook.com/decipher.ritu\" target=\"_blank\">ALFRED</a>				
 					</li>";
 					if (isset($_SESSION["fbuid"]))
 					echo "<li>
@@ -170,7 +170,7 @@ if (isset($accessToken)) {
 		
 		
 		if(!($rowcount))	
-		{$content = "<p class=\"ack\">SO YOU REACHED ME SHERLOCK...<br>THATS UNBELIEVABLE...<br>JUST WAIT HERE TILL I SET NEW SCENES FOR YOU</p>";
+		{$content = "<p class=\"ack\">SO YOU REACHED ME BATMAN...<br>THATS UNBELIEVABLE..!</p>";
 		}
 		else
 			$content =$content."<br><div id = \"answerbox\"><form action = \"answer.php\" name = \"answer\"><input id=\"ans\" type = \"text\" name = \"answer\"  autofocus autocomplete=\"off\"><br><input id=\"sub\" type = \"submit\" value = \"Check\"></form>";
@@ -210,11 +210,11 @@ echo '<a href="https://goo.gl/IEqrNw" target="_blank"><img src="imgs/decipher-ba
 } else {
 	// if not logged in display
 	$loginUrl = $helper->getLoginUrl('http://decipher.ritu16.com/');
-	echo "<div style=\"padding-top:5%;\"><h1> MISS ME?</h1>
+	echo "<div style=\"padding-top:5%;\"><h1>why so serious?</h1>
 					<span><a href=\"".$loginUrl ."\" class=\"email\">LOGIN WITH FACEBOOK</a></span></div>
 				
 					";
-					echo '<a href="https://goo.gl/IEqrNw" target="_blank"><img id="adv" style="position:fixed;bottom:0px;left:0px;" src="imgs/decipher-banner.jpg"></a>';
+					
 }
 echo "</div>
 			</div>

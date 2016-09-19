@@ -1,10 +1,12 @@
+
 @font-face {
-    font-family:latin; 
-    src: url(../fonts/sherlock.ttf);
+    font-family:'unrav'; 
+    src: url('../fonts/joker.TTF');
 }
 
 body {
-	background: url(../images/bg-home.png) no-repeat center top;
+	font-family: 'unrav';
+	background: url(../images/bg-home2.png) no-repeat center top;
 	margin: 0;
 	background-size:cover;
 	padding: 0;
@@ -74,7 +76,7 @@ img {
 	width: auto;
 }
 #header div ul li a {
-	color: #000000;
+	color:white;
 	font-family:latin;
 	font-size: 14px;
 	font-weight: normal;
@@ -123,15 +125,17 @@ img {
 	background: none;
 	color: rgba(255, 35, 35, 0.69);
 	display: block;
-	font-family:latin; 
-	font-size: 110px;
+	font-family:unrav; 
+	font-size: 115px;
 	font-weight: normal;
-	line-height: 116px;
+	line-height: 100px;
 	margin: 0 auto 32px;
 	padding: 10px;
 	text-align: center;
 	text-transform: uppercase;
 	width: 89.5833%;
+	padding-top:40px;
+	opacity:0.85;
 }
 #body.home div.header div span {
 	display: block;

@@ -12,7 +12,7 @@ if (!isset($_SESSION["fbuid"]))
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Decipher | 2016</title>
+	<title>Unravel</title>
 	<link rel="icon" href="../images/icon.png" type="image/png" sizes="16x16">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
@@ -41,7 +41,7 @@ if (!isset($_SESSION["fbuid"]))
 		<div id="header">
 			<div id="navigation">
 				<span id="mobile-navigation">&nbsp;</span>
-				<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
+				
 				<ul id="menu">
 					<li class="selected">
 						<a href="index.php">HOME</a>
@@ -54,7 +54,7 @@ if (!isset($_SESSION["fbuid"]))
 						
 					</li>
 					<li>
-					<a href="https://www.facebook.com/decipher.ritu" target="_blank">WATSON</a>	
+					<a href="https://www.facebook.com/decipher.ritu" target="_blank">ALFRED</a>	
 						
 					</li>
 					<?php
@@ -92,7 +92,7 @@ if (!isset($_SESSION["fbuid"]))
 	$ans = $row['answer'];
 	if(!($ans))
 	{
-		$content .= "<p class=\"ack\">WAIT FOR MY QUESTION SHERLOCK</p>";
+		$content .= "<p class=\"ack\">WAIT FOR MY QUESTION BATMAN</p>";
 	}
 
 

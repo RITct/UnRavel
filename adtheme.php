@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>DECIPHER</title>
+    <title>Unravel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/adstyle.css">
@@ -14,9 +14,7 @@
   <body style="background-image:url('imgs/4343.jpg')">
 
     <div id="header">
-  <div class="logo">
-    <p>DECIPHER</p>
-  </div>  
+  
   <nav>
     <ul>
 	 <li>
