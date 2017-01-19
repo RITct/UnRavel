@@ -1,10 +1,10 @@
 <?php
-/*session_start();
+	session_start();
 if (!isset($_SESSION["fbuid"]))
 {$output = "<script>
         window.location='index.php';
         </script>";
-	  echo $output; }*/
+	  echo $output; }
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ padding-top:20px;
 }
 #sub {
 	        padding:10px;
-	        min
+	        
 	        color: white;
 	        font-size:1em;
             border-radius: 4px;
@@ -64,8 +64,8 @@ padding-top:20px;
 </div>
 </div>
 </br></br>
-	<div id="log"><form id="reg" name = "register" action ="http://decipher.ritu16.com/registeraction.php" method="post">
-	<p>College</p><input class="input"  type = "text" name = "college" placeholder="or your place"required><br><p>Phone Number</p> 
+	<div id="log"><form id="reg" name = "register" action ="registeraction.php" method="post">
+	<p>College</p><input class="input"  type = "text" name = "college" placeholder="Give short names"required><br><p>Phone Number</p> 
 	<input class="input"  type = "text" name = "phone" required><br>
 	<input id="sub"  type = "submit" value = "submit" required></form><br><br>
 	</div>

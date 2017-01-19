@@ -37,13 +37,16 @@ function mysqli_result($res,$row=0,$col=0){
 	}
 	if($flag == 1)
 	{
-		header("location:register.php");
+		
+echo "error in data";
+		//header("location:register.php");
 		
 	}
 	else
 	{
-
+        
 		$phone = filter_var($_POST["phone"],519);
+		
 		$college = filter_var($_POST["college"],513);
 		$content="";
 		if(!$phone)

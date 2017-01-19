@@ -28,7 +28,7 @@
 						
 					</li>
 					<li>
-						<a href="https://www.facebook.com/decipher.ritu" target="_blank">ALFRED</a>	
+						<a href="https://www.facebook.com/unravel.cse" target="_blank">ALFRED</a>	
 					</li>
 					<?php
 					session_start();
@@ -48,9 +48,8 @@
 			<p>DONT POST ANSWERS OR ABUSIVE WORDS IN THE FORUM</p>
 			<p>NOT THE PLACE TO SHOW OFF YOUR HACKING SKILLS</p>
 			<p>SEND ME YOUR ANSWERS IN SMALL LETTERS WITHOUT SPACES AND SPECIAL CHARACTERS</p>
-			<p>FIRST PLAYER WHO REACHES THE LEVEL 25 WILL BE THE WINNER</p>
+			<p>FIRST PLAYER WHO REACHES THE LEVEL 18 WILL BE THE WINNER</p>
 			<p>YOU CAN ASK DOUBTS TO GOOGLE</p>
-			<p>DONT MIND MY ASSISTANT DINKAN MORIARTY ON LEADER BOARD</p>
 			<p>YOU KNOW I AM AWESOME AND MY DECISIONS ARE ALWAYS RIGHT</p>
 			</div>
 		</div>

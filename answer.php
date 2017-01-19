@@ -88,8 +88,9 @@ if (!isset($_SESSION["fbuid"]))
 	
 	$ref = $result->query($sql);
 	$row = mysqli_fetch_assoc($ref);
-
+	$answer=strtolower($answer);
 	$ans = $row['answer'];
+	$ans=strtolower($ans);
 	if(!($ans))
 	{
 		$content .= "<p class=\"ack\">WAIT FOR MY QUESTION BATMAN</p>";
@@ -112,7 +113,7 @@ if (!isset($_SESSION["fbuid"]))
 	else
 		{
 		
-		$content = "<img class=\"ack\" src=\"imgs/wrong/wr".rand(1,6).".jpg\"><p class=\"ack\">Wrong answer<br> <a href = \"index.php\">Try again</a></p>";
+		$content = "<img class=\"ack\" src=\"imgs/wrong/wr".rand(1,6).".jpg\"><p class=\"ack\">Wrong answer<br> <a href = \"index.php\">TRY AGAIN</a></p>";
 		
 
 		}

@@ -21,13 +21,13 @@
         <a href="adleader.php">Users</a>        
       </li>
       <li>
-        <a href="shakthiman.php?work=1">user answer logs</a>       
+        <a href="sunny_leone.php?work=1">user answer logs</a>       
       </li>
       <li>
-        <a href="shakthiman.php?work=2">add/edit Levels</a>
+        <a href="sunny_leone.php?work=2">add/edit Levels</a>
       </li>
 	  <li>
-        <a href="shakthiman.php?work=4">view Levels</a>
+        <a href="sunny_leone.php?work=4">view Levels</a>
       </li>
       <li>
         <a href="logout.php">Logout</a>

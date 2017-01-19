@@ -27,7 +27,7 @@
 						
 					</li>
 					<li>
-						<a href="https://www.facebook.com/decipher.ritu" target="_blank">ALFRED</a>	
+						<a href="https://www.facebook.com/unravel.cse" target="_blank">ALFRED</a>	
 					</li>
 					<?php
 						session_start();
@@ -52,7 +52,7 @@
             <tr align="justify"  height="40" ><th width="10%" style="color:red">RANK</th><th width="25%" style="color:red">NAME</th><th width="16%" style="color:red">COLLEGE</th><th width="10%" style="color:red">LEVEL</th></tr>
             
             <!-- start here-->
-	<?php/*
+	<?php
 	session_start();
 	require_once("database.php");
 	global $result;
@@ -81,12 +81,16 @@
 	
   
 	while($row = mysqli_fetch_assoc($ref))
-	{	if($page==1){
-		echo "<tr class=\"row\" id=\"rank".$rank."\"><td>".$rank."</td><td>".$row["name"]."</td><td>".$row["college"]."</td><td>".$row["level"]."</td></tr>";
+	{	
+$arr = explode(' ',trim($row["name"]));
+$arr2 = explode(' ',trim($row["college"]));
+
+if($page==1){
+		echo "<tr class=\"row\" id=\"rank".$rank."\"><td>".$rank."</td><td>".$arr[0]."</td><td>".$arr2[0]."</td><td>".$row["level"]."</td></tr>";
 		$rank++;
 		}
 		else{
-		echo "<tr class=\"row\"><td>".$rank."</td><td>".$row["name"]."</td><td>".$row["college"]."</td><td>".$row["level"]."</td></tr>";
+		echo "<tr class=\"row\"><td>".$rank."</td><td>".$arr[0]."</td><td>".$arr2[0]."</td><td>".$row["level"]."</td></tr>";
 		$rank++;
 		}
 	} 
@@ -113,7 +117,7 @@
 	{
 			?><a class="link" href="leader.php?page=<?php echo $page+1?>"><?php echo "Next " ?></a> <?php
 	}
-?>*/
+?>
 
 </div>
            <!-- end here-->

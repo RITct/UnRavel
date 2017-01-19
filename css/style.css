@@ -1,12 +1,15 @@
+@font-face {
+    font-family:latin; 
+    src: url(../fonts/sherlock.ttf);
+}
 
 @font-face {
-    font-family:'unrav'; 
-    src: url('../fonts/joker.TTF');
+    font-family:unrav; 
+    src: url(../fonts/joker.TTF);
 }
 
 body {
-	font-family: 'unrav';
-	background: url(../images/bg-home2.png) no-repeat center top;
+	background: url(../images/unravel.jpg) no-repeat center top;
 	margin: 0;
 	background-size:cover;
 	padding: 0;

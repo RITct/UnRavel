@@ -1,14 +1,14 @@
 <?php
 session_start();
-//require_once("database.php");
-//global $result;
+require_once("database.php");
+global $result;
 echo "<!DOCTYPE html>
 <html>
 <head>
 	<meta charset=\"UTF-8\">
 	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 	<link rel=\"icon\" href=\"../images/icon.png\" type=\"image/png\" sizes=\"16x16\">
-	<title>Decipher | 2016</title>
+	<title>UnRavel | 2016</title>
 	<link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"css/mobile.css\">
 	<script src=\"js/mobile.js\" type=\"text/javascript\"></script>
@@ -31,7 +31,7 @@ echo "<!DOCTYPE html>
 						
 					</li>
 					<li>
-						<a href=\"https://www.facebook.com/decipher.ritu\" target=\"_blank\">ALFRED</a>				
+						<a href=\"https://www.facebook.com/unravel.cse\" target=\"_blank\">ALFRED</a>				
 					</li>";
 					if (isset($_SESSION["fbuid"]))
 					echo "<li>
@@ -45,11 +45,12 @@ echo "<!DOCTYPE html>
 		<div id=\"body\" class=\"home\">
 			<div class=\"header\">
 				<div>";
+
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => 'yourappid',
-  'app_secret' => 'appsecret',
+  'app_id' => '1818883565058518',
+  'app_secret' => '148ee7c1b9872df26defca3e3ae80846',
   'default_graph_version' => 'v2.5',
   ]);
 
@@ -92,7 +93,9 @@ if (isset($accessToken)) {
 
 	// redirect the user back to the same page if it has "code" GET variable
 	if (isset($_GET['code'])) {
-		header('Location: ./decipher/index.php'); 
+	 
+		header('Location: ./index.php'); 
+		
 	}
 
 	// getting basic info about user
@@ -104,48 +107,56 @@ if (isset($accessToken)) {
 		echo 'Graph returned an error: ' . $e->getMessage();
 		session_destroy();
 		// redirecting user back to app login page
-		header("Location: ./decipher/");
+		header("Location: ./index.php");
+		
+
 		exit;
 	} catch(Facebook\Exceptions\FacebookSDKException $e) {
 		// When validation fails or other local issues
-		echo 'Facebook SDK returned an error: ' . $e->getMessage();
+		//echo 'Facebook SDK returned an error: ' . $e->getMessage();
+		echo "<br> Some Error has occured. Please refresh the page. if you are unable too see the question, please contact the FB page";
 		exit;
 	}
 	
 	// printing $profile array on the screen which holds the basic info about user
 	//print_r($profile);
 	$id=$profile['id'];
-	$_SESSION["fbuid"]=$id;
+	
 	$name=$profile['name'];
 	$sql = "SELECT * FROM users WHERE fbuid=".$id;
+
 	$ref = $result->query($sql);
 	$count=mysqli_num_rows($ref);
+	$row=mysqli_fetch_assoc($ref);
+	
+
 	if ($count==0)
 	{	
 		$sql= "INSERT INTO `users` (`fbuid`, `name`, `level`,`role`) VALUES ('".$id."', '".$name."', '0', '1')";
 		$ref = $result->query($sql);
 		$_SESSION["role"]=1;
 		$_SESSION["level"]=0;
-	
-        $output = "<script>
-        window.location='register.php';
-        </script>";
-	  echo $output;
+		header("Location:register.php");
+       // $output = "<script>
+        //window.location='register.php';
+        //</script>";
+	  //echo $output;
 		
 	}
 	
 	$sql = "SELECT * FROM users WHERE fbuid=".$id;
+
 	$ref = $result->query($sql);
 	$row = mysqli_fetch_assoc($ref);
 	$_SESSION["role"]=$row['role'];
 	$_SESSION["level"]=$row['level'];
 	$_SESSION["name"]=$row['name'];
-
+    $_SESSION["fbuid"]=$id;
 	if($_SESSION["role"] ==10 )
 	{
 		
         $output = "<script>
-        window.location='shakthiman.php';
+        window.location='sunny_leone.php';
         </script>";
 	  echo $output;
 	}
@@ -154,7 +165,7 @@ if (isset($accessToken)) {
 	{
 		$id = $_SESSION["level"];
 
-		if($id==25){
+		if($id==18){
 		 $output = "<script>
         window.location='winner.html';
         </script>";
@@ -170,7 +181,7 @@ if (isset($accessToken)) {
 		
 		
 		if(!($rowcount))	
-		{$content = "<p class=\"ack\">SO YOU REACHED ME BATMAN...<br>THATS UNBELIEVABLE..!</p>";
+		{$content = "<p class=\"ack\">YOU REACHED ME BATMAN...<br>THATS UNBELIEVABLE..!<br>WAIT HERE TILL I COME WITH NEW RIDDLES</p>";
 		}
 		else
 			$content =$content."<br><div id = \"answerbox\"><form action = \"answer.php\" name = \"answer\"><input id=\"ans\" type = \"text\" name = \"answer\"  autofocus autocomplete=\"off\"><br><input id=\"sub\" type = \"submit\" value = \"Check\"></form>";
@@ -196,7 +207,6 @@ WHERE fbuid =".$_SESSION["fbuid"]." )
 		$rank=$row['rank'];
 		$rank=$rank+1;
 echo "<h2>Your rank  ".$rank."</h2>";
-echo '<a href="https://goo.gl/IEqrNw" target="_blank"><img src="imgs/decipher-banner.jpg"></a>';
 
 	}	
 	else if ($_SESSION["role"]<0)
@@ -209,7 +219,8 @@ echo '<a href="https://goo.gl/IEqrNw" target="_blank"><img src="imgs/decipher-ba
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
 	// if not logged in display
-	$loginUrl = $helper->getLoginUrl('http://decipher.ritu16.com/');
+	//$loginUrl = $helper->getLoginUrl('http://unravel.ensemble16.ml/');
+	$loginUrl = $helper->getLoginUrl('http://unravel.ensemble16.ml/');
 	echo "<div style=\"padding-top:5%;\"><h1>why so serious?</h1>
 					<span><a href=\"".$loginUrl ."\" class=\"email\">LOGIN WITH FACEBOOK</a></span></div>
 				
