@@ -49,8 +49,8 @@ echo "<!DOCTYPE html>
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '1818883565058518',
-  'app_secret' => '148ee7c1b9872df26defca3e3ae80846',
+  'app_id' => 'your app id',
+  'app_secret' => 'your app secret',
   'default_graph_version' => 'v2.5',
   ]);
 
